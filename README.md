@@ -6,7 +6,7 @@ Exemplo se solicitação da API para envio de leituras de um ponto de captação
 
 ```bash
 
-curl --location --request POST 'http://localhost:8082/api/v1/telemetria/demanda-hidrica' \
+curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/mira/api/v1/telemetria/demanda-hidrica' \
 --header 'API-Key: <<SUA API Key>>' \
 --header 'Content-Type: application/json' \
 --header 'Accept: */*' \
