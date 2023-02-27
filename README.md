@@ -1,7 +1,7 @@
 # Documentação da API do sistema de monitoramento do IGAM.
 
 
-Exemplo se solicitação da API para envio de leituras de um ponto de captação:
+Exemplo de solicitação da API para envio de leituras de um ponto de captação:
 
 
 ```bash
