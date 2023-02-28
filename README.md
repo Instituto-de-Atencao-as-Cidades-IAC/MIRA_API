@@ -3,23 +3,23 @@
 ## ❓[1. Issues](https://github.com/Instituto-de-Atencao-as-Cidades-IAC/MIRA_API/issues)
 
 
-Neste repositório, na aba "Issues", existe um espaço para que as dúvidas possam ser compartilhadas e discutidas com a equipe IAC e outros Operadores de Telemetria. Sinta-se à vontade para fazer perguntas e compartilhar suas dúvidas.
+Neste repositório, a aba "Issues" possibilita que as dúvidas possam ser compartilhadas e discutidas com a equipe IAC, além de outros Operadores de Telemetria. Sinta-se à vontade para fazer perguntas e compartilhar suas dúvidas.
 
 
 ## ⚒️ [2. Postman](https://www.postman.com/)
 
-A documentação da API está disponibilizada via [Swagger](https://swagger.io/) pelo seguinte endereço: <https://dev.ecosistemas.meioambiente.mg.gov.br/mira/swagger-ui/index.html>. De modo a facilitar os testes de solicitação à API, sem ter que escrever código, o Operador de Telemetria pode utilizar a ferramenta Postman. Além disso, é possível importar a documentação na ferramenta Postman usando os seguintes tutoriais: 
+A documentação da API está disponibilizada via [Swagger](https://swagger.io/) pelo seguinte endereço: <https://dev.ecosistemas.meioambiente.mg.gov.br/mira/swagger-ui/index.html>. De modo a facilitar os testes de solicitação à API, sem ter que escrever o código, o Operador de Telemetria pode utilizar a ferramenta Postman. Dito isso, é possível importar a documentação na ferramenta Postman usando os seguintes tutoriais: 
  - [Import Swagger APIs into Postman](https://www.baeldung.com/swagger-apis-in-postman)
  - [Convert Swagger documentation to Postman Collection](https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14)
 
- Ao utilizar a ferramenta Postman é possível gerar um código para executar as requisições na API em diversas linguagens. A seguir, exemplos que foram gerados com a ferramenta:
+Ao utilizar a ferramenta Postman é possível gerar um código para executar as requisições na API em diversas linguagens. A seguir, exemplos que foram gerados com a ferramenta:
 
 ## 📓 3. Exemplos de Utilização
 
 ### 💧 3.1 Demanda Hídrica 
 #### Enviar leituras de um Ponto de Captação pela API
 
-Exemplo de solicitação da API para enviar as leituras de um Ponto de Captação. No exemplo em questão, estão sendo enviadas as leituras de 07:30 e 07:45 do dia 08/01/2023, considerando uma bomba que inciou a captação às 7:15 e captou 1 m³/s durante 30 minutos.
+Exemplo de solicitação da API para enviar as leituras de um Ponto de Captação. No exemplo em questão, estão sendo enviadas as leituras de 07:30 (UTC-03:00) e 07:45(UTC-03:00) do dia 08/01/2023, considerando uma bomba que iniciou sua captação às 7:15(UTC-03:00) e captou 1 m³/s durante 30 minutos.
 
 
 ```bash
@@ -56,8 +56,7 @@ curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/m
 #### Enviar leituras de uma Estação Secundária pela API
 
 
-Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, estão sendo enviadas as leituras de 07:30 e 07:45 do dia 08/01/2023 para um curso d'água que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Afim de obter os valores de vazão, camopanhas de meedição de vazão em campo devem ser realizadas até que seja posivel obter a curva chave do Ponto e o Operador de Telemetria estimar a patir da cota lida.
-
+Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, estão sendo enviadas as leituras de 07:30(UTC-03:00) e 07:45(UTC-03:00) do dia 08/01/2023 para um curso d'água que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Caso também possua os dados de vazão, é possível enviar pela API conforme ilustrado na leitura das 07:45(UTC-03:00):
 ```bash
 curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/mira/api/v1/telemetria/disponibilidade-hidrica' \
 --header 'API-Key: <<API Key do Operador de Telemetria>>' \
