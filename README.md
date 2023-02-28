@@ -8,7 +8,7 @@ Neste repositório, através da aba "Issues", existe um espaço para que as dúv
 
 ## ⚒️ [Postman](https://www.postman.com/)
 
-A documentação da API está disponibildizada via [Swagger](https://swagger.io/) pelo seguinte endereço: <https://dev.ecosistemas.meioambiente.mg.gov.br/mira/swagger-ui/index.html>. Para facilitar os testes e executar solitações a API sem ter que escrever código, o operador de telemeria pode utilizar a ferramenta Postman. Além disso, é possível importar a documentação na ferramenta Postman usando o seguintes tutoriais: 
+A documentação da API está disponibilizada via [Swagger](https://swagger.io/) pelo seguinte endereço: <https://dev.ecosistemas.meioambiente.mg.gov.br/mira/swagger-ui/index.html>. Para facilitar os testes e executar solicitação a API sem ter que escrever código, o operador de telemetria pode utilizar a ferramenta Postman. Além disso, é possível importar a documentação na ferramenta Postman usando os seguintes tutoriais: 
  - [Import Swagger APIs into Postman](https://www.baeldung.com/swagger-apis-in-postman)
  - [Convert Swagger documentation to Postman Collection](https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14)
 
@@ -52,8 +52,9 @@ curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/m
 ```
 
 
-## 🏞️ Disponiblidade hídrica  
+## 🏞️ Disponibilidade hídrica  
 ### Enviar leituras de uma Estação Secundária pela API
+
 
 Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, está sendo enviado as leituras das 07:30 e 07:45 do dia 08/01/2023 para um rio que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Além disso, na leitura das 07:45 o foi possível calcular a curva chave do rio e obter a vazão de 10 m³/s para o nível 110 cm.
 
