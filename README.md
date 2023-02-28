@@ -1,31 +1,31 @@
-# 📖 Documentação adicional da API do sistema de monitoramento do IGAM.
+# 📖 API do Monitoramento Remoto Integrado das Águas - MIRA.
 
-## ❓[Issues](https://github.com/Instituto-de-Atencao-as-Cidades-IAC/MIRA_API/issues)
-
-
-Neste repositório, através da aba "Issues", existe um espaço para que as dúvidas possam ser compartilhadas e discutidas com a equipe IAC e outros Operadores de Telemetria. Sinta-se à vontade para fazer perguntas e compartilhar suas dúvidas, para que possamos ajudar uns aos outros a utilizar a API de forma mais eficiente.
+## ❓[1. Issues](https://github.com/Instituto-de-Atencao-as-Cidades-IAC/MIRA_API/issues)
 
 
-## ⚒️ [Postman](https://www.postman.com/)
+Neste repositório, na aba "Issues", existe um espaço para que as dúvidas possam ser compartilhadas e discutidas com a equipe IAC e outros Operadores de Telemetria. Sinta-se à vontade para fazer perguntas e compartilhar suas dúvidas.
 
-A documentação da API está disponibilizada via [Swagger](https://swagger.io/) pelo seguinte endereço: <https://dev.ecosistemas.meioambiente.mg.gov.br/mira/swagger-ui/index.html>. Para facilitar os testes e executar solicitação a API sem ter que escrever código, o operador de telemetria pode utilizar a ferramenta Postman. Além disso, é possível importar a documentação na ferramenta Postman usando os seguintes tutoriais: 
+
+## ⚒️ [2. Postman](https://www.postman.com/)
+
+A documentação da API está disponibilizada via [Swagger](https://swagger.io/) pelo seguinte endereço: <https://dev.ecosistemas.meioambiente.mg.gov.br/mira/swagger-ui/index.html>. De modo a facilitar os testes de solicitação à API, sem ter que escrever código, o Operador de Telemetria pode utilizar a ferramenta Postman. Além disso, é possível importar a documentação na ferramenta Postman usando os seguintes tutoriais: 
  - [Import Swagger APIs into Postman](https://www.baeldung.com/swagger-apis-in-postman)
  - [Convert Swagger documentation to Postman Collection](https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14)
 
- Através do Postman é possível gerar código para executar as requisições em diversas linguagens. Os exemplos apresentados a abaixo foram gerados pela ferramenta.
+ Ao utilizar a ferramenta Postman é possível gerar um código para executar as requisições na API em diversas linguagens. A seguir, exemplos que foram gerados com a ferramenta:
 
-## 📓 Exemplo de utilização
+## 📓 3. Exemplos de Utilização
 
-## 💧 Demanda hídrica 
-### Enviar leituras de um Ponto de Captação pela API
+### 💧 3.1 Demanda Hídrica 
+#### Enviar leituras de um Ponto de Captação pela API
 
-Exemplo de solicitação da API para enviar as leituras de um Ponto de Captação. No exemplo em questão, está sendo enviado as leituras das 07:30 e 07:45 do dia 08/01/2023 para uma bomba que capta 1 m³/s durante 30 minutos.
+Exemplo de solicitação da API para enviar as leituras de um Ponto de Captação. No exemplo em questão, estão sendo enviadas as leituras de 07:30 e 07:45 do dia 08/01/2023, considerando uma bomba que inciou a captação às 7:15 e captou 1 m³/s durante 30 minutos.
 
 
 ```bash
 
 curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/mira/api/v1/telemetria/demanda-hidrica' \
---header 'API-Key: <<API Key do Operador de Telemetria>>' \
+--header 'API-Key: <<API Key do Operador de Telemetria, obtida no MIRA>>' \
 --header 'Content-Type: application/json' \
 --header 'Accept: */*' \
 --data-raw '[
@@ -52,12 +52,11 @@ curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/m
 ```
 
 
-## 🏞️ Disponibilidade hídrica  
-### Enviar leituras de uma Estação Secundária pela API
+### 🏞️ 3.2 Disponibilidade Hídrica  
+#### Enviar leituras de uma Estação Secundária pela API
 
 
-Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, está sendo enviado as leituras das 07:30 e 07:45 do dia 08/01/2023 para um rio que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Além disso, na leitura das 07:45 foi possível calcular a curva chave do rio e obter a vazão de 10 m³/s para o nível em 110 cm.
-
+Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, estão sendo enviadas as leituras de 07:30 e 07:45 do dia 08/01/2023 para um curso d'água que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Afim de obter os valores de vazão, camopanhas de meedição de vazão em campo devem ser realizadas até que seja posivel obter a curva chave do Ponto e o Operador de Telemetria estimar a patir da cota lida.
 
 ```bash
 curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/mira/api/v1/telemetria/disponibilidade-hidrica' \
