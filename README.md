@@ -56,7 +56,7 @@ curl --location --request POST 'https://dev.ecosistemas.meioambiente.mg.gov.br/m
 ### Enviar leituras de uma Estação Secundária pela API
 
 
-Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, está sendo enviado as leituras das 07:30 e 07:45 do dia 08/01/2023 para um rio que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Além disso, na leitura das 07:45 o foi possível calcular a curva chave do rio e obter a vazão de 10 m³/s para o nível 110 cm.
+Exemplo de solicitação da API para enviar as leituras de uma Estação Secundária. No exemplo em questão, está sendo enviado as leituras das 07:30 e 07:45 do dia 08/01/2023 para um rio que tem o nível 100 cm na primeira leitura e 110 cm na segunda leitura. Além disso, na leitura das 07:45 foi possível calcular a curva chave do rio e obter a vazão de 10 m³/s para o nível em 110 cm.
 
 
 ```bash
