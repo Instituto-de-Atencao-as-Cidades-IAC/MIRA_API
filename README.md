@@ -1,6 +1,6 @@
 # 📖 Documentação adicional da API do sistema de monitoramento do IGAM.
 
-## 🚩[Issues](https://github.com/Instituto-de-Atencao-as-Cidades-IAC/MIRA_API/issues)
+## ❓[Issues](https://github.com/Instituto-de-Atencao-as-Cidades-IAC/MIRA_API/issues)
 
 
 Neste repositório, através da aba "Issues", existe um espaço para que as dúvidas possam ser compartilhadas e discutidas com a equipe IAC e outros Operadores de Telemetria. Sinta-se à vontade para fazer perguntas e compartilhar suas dúvidas, para que possamos ajudar uns aos outros a utilizar a API de forma mais eficiente.
